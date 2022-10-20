@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.btn {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    background: $purple;
+    color: $white;
+    font-family: "open sans";
+    font-size: .8rem;
+    position: absolute;
+    margin: auto;
+    border: none;
+    top: 43rem;
+
+    &:hover {
+        background: $purpleHover;
+        box-shadow: 0 0 2px $black;
+    }
+
+    &:after {
+        content: url("../../../assets/img/flecha.png");
+        position: relative;
+        top: 2px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        top: 30rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        top: 45rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .btn {
+        top: 44rem;
+    }
+}

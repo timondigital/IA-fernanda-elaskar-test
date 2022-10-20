@@ -1,0 +1,166 @@
+@import "../../styles/variables.scss";
+
+.btnBurger {
+  height: 1.8rem;
+  width: 2rem;
+  position: relative;
+  margin-right: 2vw;
+
+  .lineBurger1,
+  .lineBurger2,
+  .lineBurger3 {
+    position: absolute;
+    content: "";
+    background: #b98b3c;
+    width: 1.8rem;
+    height: 0.3rem;
+    right: 0;
+    border-radius: 0.5rem;
+    transition: all ease 0.3s;
+  }
+
+  .lineBurger1 {
+    top: 0.1rem;
+    height: 0.25rem;
+
+    &.active {
+      transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      top: 1rem;
+    }
+  }
+
+  .lineBurger2 {
+    top: 0.75rem;
+    width: 1.4rem;
+    height: 0.25rem;
+
+    &.active {
+      opacity: 0;
+    }
+  }
+
+  .lineBurger3 {
+    bottom: 0.1rem;
+    height: 0.25rem;
+
+    &.active {
+      transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      top: 1rem;
+    }
+  }
+}
+
+.nav {
+  background: $lightGray;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 68px;
+  padding: 0.5rem 0 0;
+  z-index: 600;
+  width: auto;
+  min-width: 13rem;
+  right: -14rem;
+  transition: all 0.9s;
+
+  &.show {
+    right: 0;
+    transition: all 0.4s;
+  }
+
+
+  .btnGroup {
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      color: $mediumGray;
+      width: 100%;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: $grape;
+      }
+
+      &:active {
+        background: $pink;
+        color: $grape;
+      }
+    }
+  }
+
+  .networks {
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem 2rem 1rem;
+    gap: .5rem;
+    justify-content: flex-end;
+
+    .networksButton {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .btnBurger {
+    margin-right: 5vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btnBurger {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    top: 0px;
+    padding: 0;
+    display: flex;
+    right: 0;
+    align-items: center;
+
+    .btnGroup {
+      align-items: center;
+      padding: 0.5rem 0.7rem;
+      flex-direction: row;
+
+      .btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.7rem;
+        width: auto;
+        color: $black;
+        padding: 2.3rem 1rem;
+
+        &:hover {
+          background: transparent;
+          font-weight: bold;
+        }
+
+        &:active {
+          background: transparent;
+          box-shadow: inset 0 -3px 0 $purple
+        }
+      }
+    }
+
+    .networks {
+      margin: 0rem 3rem 0 0;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {}

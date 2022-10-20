@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.nutritionalTable {
+    color: $purple;
+    margin: 2rem auto 1.5rem;
+
+    tbody {
+        tr {
+            td {
+                font-size: .75rem;
+                padding: .5rem;
+
+                &:nth-child(1) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nutritionalTable {
+        margin: 0
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+    .nutritionalTable {
+        tbody {
+            tr {
+                td {
+                    font-size: .9rem;
+                    padding: .5rem;
+                }
+            }
+        }
+    }
+}

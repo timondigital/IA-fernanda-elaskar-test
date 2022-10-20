@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.infoContent {
+    position: relative;
+    padding: 10rem 1.3rem 0;
+    z-index: 11;
+
+    * {
+        font-size: .9rem;
+    }
+
+    .title {
+        color: $grape;
+        font-weight: 300;
+        letter-spacing: .15rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+        width: 80vw;
+        max-width: 800px;
+    }
+
+    .dataProductContent {
+        padding: 1rem 0;
+        max-width: 30rem;
+
+        .ingredients {
+            padding: 1rem 0;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .infoContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        padding-top: 6rem;
+
+        .dataProductContent {
+            padding: 1rem 0 3rem;
+            width: 80vw;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+
+            .textContent {
+                width: 50%;
+            }
+
+            .ingredients {
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+
+    .infoContent {
+        padding-bottom: 3rem;
+        padding-top: 12rem;
+
+        .title {
+            font-size: 2rem;
+        }
+    }
+}
